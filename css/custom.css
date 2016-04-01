@@ -1,0 +1,14 @@
+.custom-back{
+  background: #777 url('https://images.unsplash.com/photo-1458819651889-620839ac84a5?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=336bf9854be86766a060842bf59dea0a');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 15em;
+
+}
+
+
+.typo-color-custom{
+  color: #fff;
+  font-weight: 900;
+}
