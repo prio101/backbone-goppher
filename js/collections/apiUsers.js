@@ -1,7 +1,7 @@
 var apiUsers = Backbone.Collection.extend({
 //  url : "https://api.github.com/legacy/repos/search/ruby",
 
-  model: ApiUserModel,
+//  model: ApiUserModel,
 
   parse: function(git){
     return git.repositories;

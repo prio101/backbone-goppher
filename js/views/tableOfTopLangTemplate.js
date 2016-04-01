@@ -1,15 +1,22 @@
 var topLang = Backbone.View.extend({
-  el: "#test",
-  model: ApiLangModel,
-
-  initialize: function(){
-    console.log("Initialized");
-
+  el: "#users-list",
+  
+  template : _.template($("#user").html()),
+  initialize: function(datacollection){
+      console.log("Initialized");
+      this.collection = datacollection;
+      this.render() ;
   },
 
   render: function(){
-    this.$el.html("Hi Threr");
+    this.collection.each(function(user){
+      this.renderData(user);
+    }, this);
+  },
+
+  renderData: function(data){
+    this.model = data;
+    this.$el.append(this.template(this.model.attributes));
+    return this;
   }
 });
-
-var view = new topLang();
