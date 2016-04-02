@@ -12,7 +12,7 @@ var apiLangCollectionPython = Backbone.Collection.extend({
 var lang_repos = new apiLangCollectionPython();
 
 lang_repos.fetch({success: function(){
-    var usernameRender = new topLangNPython(lang_repos);
+    var usernameRender = new topLangPython(lang_repos);
 
     var labels = lang_repos.pluck("username");
     var forks = lang_repos.pluck("forks");
