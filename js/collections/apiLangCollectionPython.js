@@ -12,7 +12,7 @@ var apiLangCollectionPython = Backbone.Collection.extend({
 var lang_repos = new apiLangCollectionPython();
 
 lang_repos.fetch({success: function(){
-    var usernameRender = new topLangNPython(lang_repos);
+    var usernameRender = new topLangPython(lang_repos);
 
     var labels = lang_repos.pluck("username");
     var forks = lang_repos.pluck("forks");
@@ -28,7 +28,7 @@ lang_repos.fetch({success: function(){
         labels : labels,
         datasets : [
         {
-            fillColor : "#f2ca27",
+            fillColor : "#c0392b",
             strokeColor : "#f2ca27",
             pointColor : "#fff",
             pointStrokeColor : "##f2ca27",
@@ -46,8 +46,8 @@ lang_repos.fetch({success: function(){
         labels : name,
         datasets : [
             {
-                fillColor : "#48A497",
-                strokeColor : "#48A4D1",
+                fillColor : "#2c3e50",
+                strokeColor : "#2c3e50",
                 data : score
             }
         ]
