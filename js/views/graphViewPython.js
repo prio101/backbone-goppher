@@ -1,7 +1,7 @@
-var topLang = Backbone.View.extend({
-  el: "#ruby-list",
+var topLangPython = Backbone.View.extend({
+  el: "#python-list",
 
-  template : _.template($("#ruby").html()),
+  template : _.template($("#python").html()),
   initialize: function(datacollection){
       console.log("Initialized");
       this.collection = datacollection;

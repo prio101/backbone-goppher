@@ -13,8 +13,8 @@
     <div class="nav-wrapper cyan darken-3">
       <a href="#" class="brand-logo"><img src="http://i1181.photobucket.com/albums/x435/craigdholbrook/Sportslogos%20Board/Gopher.png" width="55" height="55" alt=""></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">Github</a></li>
-        <li><a href="#">About Author</a></li>
+        <li><a href="">Github</a></li>
+        <li><a href="http://mahabub.space" target="_blank">About Author</a></li>
 
       </ul>
     </div>
@@ -24,7 +24,7 @@
     <div class="row">
       <div class="col s12 custom-back">
           <h4 class="center typo-color-custom">Goppher Chart</h2>
-          <p class="center typo-color-custom">This is a page made for you. Well also for some stat.</p>
+          <p class="center typo-color-custom">To Give a insight of Popular Languages and Status By Open Source Contributions</p>
       </div>
     </div>
   </div>
@@ -39,13 +39,47 @@
 
 
 
-  <div id="users-list"></div>
-  <script type="text/template" id="user">
-    <label for="user"><%= username %> </label>
-  </script>
+    <div id="ruby-list"></div>
+    <h3 class="center">Ruby</h3>
+    <script type="text/template" id="ruby">
+    </script>
+      <h4 class="center">Data Sorted By Forks And Language Name</h4>
+     <!-- lang popularity -->
+     <canvas id="lang-popularity" width="1200" height="500"></canvas>
+      <br>
+      <h4 class="center">Data Sorted By Score and Name of the Organization Using Language</h4>
+     <!-- bar chart canvas element -->
+     <canvas id="score" width="1200" height="500"></canvas>
 
+       <div id="node-list"></div>
+       <h3 class="center">Node JS</h3>
+       <script type="text/template" id="node">
+       </script>
+       <h4 class="center">Data Sorted By Forks And Language Name</h4>
+      <!-- lang popularity -->
+      <canvas id="lang-popularity-node" width="1200" height="500"></canvas>
+       <br>
+       <h4 class="center">Data Sorted By Score and Name of the Organization Using Language</h4>
+      <!-- bar chart canvas element -->
+      <canvas id="score-node" width="1200" height="500"></canvas>
 
+          <div id="python-list"></div>
+          <h3 class="center">Python</h3>
+          <script type="text/template" id="python">
+          </script>
+          <h4 class="center">Data Sorted By Forks And Language Name</h4>
+         <!-- lang popularity -->
+          <canvas id="lang-popularity-python" width="1200" height="500"></canvas>
+          <br>
+          <h4 class="center">Data Sorted By Score and Name of the Organization Using Language</h4>
+          <!-- bar chart canvas element -->
+          <canvas id="score-python" width="1200" height="500"></canvas>
 
+  <section>
+    <footer>
+      <small class="center">There Is always new awesome languages . So help us , Fork the git repo and make this web graph more helpful</small>
+    </footer>
+  </section>
   <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
@@ -57,20 +91,24 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 
+  <!-- chart js -->
+  <script src="js/vendors/Chart.js/Chart.js"></script>
   <!-- Custom js -->
   <!-- Models -->
-  <!-- <script src="js/models/apiUserModel.js"></script>-->
 
-  <!-- <script src="js/models/userModel.js"></script> -->
   <script src="js/models/apiLangModel.js"></script>
   <!-- Collections -->
-  <!-- <script src="js/collections/apiUsers.js"></script> -->
-  <script src="js/collections/apiLangCollection.js"></script>
- <!-- <script src="js/collections/userCollection.js"></script> -->
+
+  <script src="js/collections/apiLangCollectionRuby.js"></script>
+  <script src="js/collections/apiLangCollectionJS.js"></script>
+  <script src="js/collections/apiLangCollectionPython.js"></script>
+
 
   <!-- Views -->
   <script src="js/views/tableOfTopLangTemplate.js"></script>
-  <!-- <script src="js/views/userView.js"></script> -->
+  <script src="js/views/graphViewNode.js"></script>
+  <script src="js/views/graphViewPython.js"></script>
+
 
 </body>
 </html>
